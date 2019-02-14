@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'user',
+    'registration',
     'core',
     'crud',
     'contact',
@@ -54,6 +54,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+
 
 ROOT_URLCONF = 'mysite.urls'
 
@@ -128,3 +130,11 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL =  '/'
 
 CRISPY_TEMPLATE_PACK =  'bootstrap4'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'sumitmallick5830@gmail.com'
+EMAIL_HOST_PASSWORD = 'Ender765@'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

@@ -1,0 +1,9 @@
+<a id="home" class="nav-item nav-link active" href="/#home">HOME</a>
+{% if not user.is_authenticated %} <!-- if not logged in -->
+<a class="nav-item nav-link" href="{% url 'accounts:login' %}?next=/">LOGIN</a>
+<a class="nav-item nav-link" href="{% url 'accounts:sign_up' %}">SIGN_UP</a>
+{% else %}
+<a class="nav-item nav-link" href="{% url 'accounts:password_change' %}">CHANGE_PASSWORD</a>
+<a class="nav-item nav-link" href="{% url 'accounts:logout' %}">LOGOUT</a>
+{% endif %}
+</div>

@@ -21,5 +21,5 @@ urlpatterns = [
     path('core/', include("core.urls")),
     path('crud/', include("crud.urls")),
     path('contact/', include("contact.urls")),
-    path('', include('user.urls'))
+    path('', include('registration.urls'))
 ]
