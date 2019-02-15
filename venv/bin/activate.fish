@@ -32,7 +32,7 @@ end
 # unset irrelavent variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/sumitmalik/sumit-work/crud/venv"
+set -gx VIRTUAL_ENV "/home/sumitmalik/sumit-work/crud/mysite/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

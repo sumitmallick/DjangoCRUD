@@ -1,7 +1,10 @@
 from django.contrib.auth import views
-from django.urls import path, include
+from django.urls import path, include, re_path, reverse_lazy
+
 from . import views
 from django.contrib.auth import views as auth_views
+
+from django.views.generic import RedirectView
 
 app_name = 'registration'
 
@@ -12,7 +15,4 @@ urlpatterns = [
 
     path('logout/', views.logout_user, name='logout_user'),
 
-    path('', include('django.contrib.auth.urls')),
-
-    path('change-password/', views.change_password, name='change_password'),
 ]
