@@ -9,4 +9,5 @@ urlpatterns = [
     path('create', views.ContactCreate.as_view(model=Contact, success_url=reverse_lazy('contact_list')), name='contact_create'),
     path('update/<int:pk>', views.ContactUpdate.as_view(model=Contact, success_url=reverse_lazy('contact_list')), name='contact_update'),
     path('delete/<int:pk>', views.ContactDelete.as_view(model=Contact, success_url=reverse_lazy('contact_list')), name='contact_delete'),
+    path('profile/<int:pk>', views.profile_page, name="profile_page")
 ]

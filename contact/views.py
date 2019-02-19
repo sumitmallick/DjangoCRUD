@@ -6,7 +6,9 @@ from .models import Contact
 
 from .forms import ContactCreateForm
 from django.contrib.messages.views import SuccessMessageMixin
+
 from django.contrib.auth.views import LoginView
+from django.contrib.auth.models import User
 
 
 class ContactLoginView(LoginView):
@@ -31,3 +33,7 @@ class ContactDelete(DeleteView):
 class ContactUpdate(UpdateView):
 	model = Contact
 	form_class = ContactCreateForm
+
+def profile_page(request, pk):
+    user = Contact.objects.get(id = pk)
+    return render(request, 'contact/user_profile.html', {'user_profile': user})

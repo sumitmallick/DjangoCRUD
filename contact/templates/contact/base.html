@@ -17,17 +17,23 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
 
     <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="{% static 'contact/css/profile.css' %}">
     <link href="{% static 'contact/css/dashboard.css' %}" rel="stylesheet">
   </head>
 
   <body>
     <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
       <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Mojave</a>
+      <div style="padding-left:700px;">
       <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+      </div>
+      <div>
+        <a class="fa fa-user" style="color:white;" href="{% url 'profile_page' user.id %}">  {{user.username}}</a>
+      </div>
       <ul class="navbar-nav px-3">
          
         <li class="nav-item text-nowrap">
-          <a class="nav-link" href="{% url 'registration:logout_user' %}">Sign out</a>
+          <a class="nav-link" href="{% url 'userregister:logout_user' %}">Sign out</a>
         </li>
       </ul>
     </nav>
@@ -60,7 +66,7 @@
         </nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+          <!-- <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
             <h1 class="h2">Dashboard</h1>
             <div class="btn-toolbar mb-2 mb-md-0">
               <div class="btn-group mr-2">
@@ -72,7 +78,7 @@
                 This week
               </button>
             </div>
-          </div>
+          </div> -->
 
 
           <div>
